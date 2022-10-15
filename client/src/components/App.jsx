@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
 import MovieList from './MovieList';
 import SearchBar from './SearchBar';
+import AddMovie from './AddMovie';
 
 export default function App() {
-  const movies = [
-    { title: 'Mean Girls' },
-    { title: 'Hackers' },
-    { title: 'The Grey' },
-    { title: 'Sunshine' },
-    { title: 'Ex Machina' },
-  ];
-
+  const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+
+  const addMovie = (movie) => {
+    setMovies([
+      ...movies,
+      {
+        title: movie,
+      },
+    ]);
+  };
 
   return (
     <>
+      <AddMovie add={addMovie} />
       <SearchBar setTerm={setSearchTerm} />
       <MovieList
         movies={
