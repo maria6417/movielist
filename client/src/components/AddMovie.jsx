@@ -10,7 +10,7 @@ export default function AddMovie({ add }) {
 
   return (
     <form onSubmit={submitHandler}>
-      <input type="text" placeholder="Add movie title here" onChange={(e) => setTitle(e.target.value)} />
+      <input type="text" placeholder="Add movie title here" onChange={(e) => setTitle(e.target.value)} value={title} />
       <button type="submit">Add</button>
     </form>
   );
