@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-export default function WatchedTab() {
-  const [watched, setWatched] = useState(true);
+export default function WatchedTab({ watched, setWatched }) {
   const clickHandler = (e) => {
     e.target.innerText === 'Watched' ? setWatched(true) : setWatched(false);
   };

@@ -870,7 +870,7 @@ var _templateObject, _templateObject2;
 
 function Movie(_ref) {
   var item = _ref.item,
-      tab = _ref.tab;
+      watchedTab = _ref.watchedTab;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
       _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState, 2),
@@ -881,6 +881,7 @@ function Movie(_ref) {
     setWatched(!watched);
   };
 
+  if (watched !== watchedTab) return null;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(Box, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("span", null, item.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(Button, {
     type: "button",
     onClick: clickHandler,
@@ -941,10 +942,10 @@ function MovieList(_ref) {
       filteredMovies = _useState4[0],
       setFilteredMovies = _useState4[1];
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)('watched'),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(true),
       _useState6 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState5, 2),
-      tab = _useState6[0],
-      setTab = _useState6[1];
+      watchedTab = _useState6[0],
+      setWatchedTab = _useState6[1];
 
   (0,react__WEBPACK_IMPORTED_MODULE_3__.useEffect)(function () {
     setFilteredMovies(movies.filter(function (m) {
@@ -952,14 +953,15 @@ function MovieList(_ref) {
     }));
   }, [searchTerm, movies]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(Flex, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_WatchedTab__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    setTab: setTab
+    watched: watchedTab,
+    setWatched: setWatchedTab
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_SearchBar__WEBPACK_IMPORTED_MODULE_5__["default"], {
     setTerm: setSearchTerm
   })), filteredMovies.length ? filteredMovies.map(function (movie) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_Movie__WEBPACK_IMPORTED_MODULE_4__["default"], {
       item: movie,
       key: movie.title,
-      tab: tab
+      watchedTab: watchedTab
     });
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement("div", null, "No match found."));
 }
@@ -1014,36 +1016,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ WatchedTab)
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/taggedTemplateLiteral */ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
 
 var _templateObject, _templateObject2;
 
 
 
-function WatchedTab() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(true),
-      _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState, 2),
-      watched = _useState2[0],
-      setWatched = _useState2[1];
+function WatchedTab(_ref) {
+  var watched = _ref.watched,
+      setWatched = _ref.setWatched;
 
   var clickHandler = function clickHandler(e) {
     e.target.innerText === 'Watched' ? setWatched(true) : setWatched(false);
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(Tab, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Tab, {
     clicked: watched,
     onClick: clickHandler
-  }, "Watched"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(Tab, {
+  }, "Watched"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Tab, {
     clicked: !watched,
     onClick: clickHandler
   }, "To Watch"));
 }
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject || (_templateObject = (0,_babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n"])));
-var Tab = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject2 || (_templateObject2 = (0,_babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  color: ", ";\n  background-color: ", ";\n  border: 1px solid grey;\n"])), function (props) {
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject || (_templateObject = (0,_babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n"])));
+var Tab = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2 || (_templateObject2 = (0,_babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  color: ", ";\n  background-color: ", ";\n  border: 1px solid grey;\n"])), function (props) {
   return props.clicked ? 'white' : 'black';
 }, function (props) {
   return props.clicked ? 'green' : 'white';

@@ -7,7 +7,7 @@ import WatchedTab from './WatchedTab';
 export default function MovieList({ movies }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredMovies, setFilteredMovies] = useState([...movies]);
-  const [tab, setTab] = useState('watched');
+  const [watchedTab, setWatchedTab] = useState(true);
 
   useEffect(() => {
     setFilteredMovies(movies.filter(
@@ -21,11 +21,11 @@ export default function MovieList({ movies }) {
   return (
     <div>
       <Flex>
-        <WatchedTab setTab={setTab} />
+        <WatchedTab watched={watchedTab} setWatched={setWatchedTab} />
         <SearchBar setTerm={setSearchTerm} />
       </Flex>
       {filteredMovies.length
-        ? filteredMovies.map((movie) => <Movie item={movie} key={movie.title} tab={tab} />)
+        ? filteredMovies.map((movie) => <Movie item={movie} key={movie.title} watchedTab={watchedTab} />)
         : <div>No match found.</div>}
     </div>
   );

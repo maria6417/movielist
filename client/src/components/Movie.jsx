@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-export default function Movie({ item, tab }) {
+export default function Movie({ item, watchedTab }) {
   const [watched, setWatched] = useState(false);
   const clickHandler = (e) => {
     setWatched(!watched);
   };
+
+  if (watched !== watchedTab) return null;
 
   return (
     <Box>
