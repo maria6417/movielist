@@ -807,34 +807,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ App)
 /* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _MovieList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MovieList */ "./client/src/components/MovieList.jsx");
-/* harmony import */ var _AddMovie__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./AddMovie */ "./client/src/components/AddMovie.jsx");
+/* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/taggedTemplateLiteral */ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _MovieList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MovieList */ "./client/src/components/MovieList.jsx");
+/* harmony import */ var _AddMovie__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./AddMovie */ "./client/src/components/AddMovie.jsx");
+
+
+
+
+var _templateObject;
 
 
 
 
 
 function App() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
-      _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState, 2),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)([]),
+      _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState, 2),
       movies = _useState2[0],
       setMovies = _useState2[1];
 
   var addMovie = function addMovie(movie) {
-    setMovies([].concat((0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(movies), [{
+    setMovies([].concat((0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(movies), [{
       title: movie
     }]));
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react__WEBPACK_IMPORTED_MODULE_2__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_AddMovie__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement("h2", null, "Movie List"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_AddMovie__WEBPACK_IMPORTED_MODULE_5__["default"], {
     add: addMovie
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_MovieList__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_MovieList__WEBPACK_IMPORTED_MODULE_4__["default"], {
     movies: movies
   }));
 }
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject || (_templateObject = (0,_babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 60%;\n  margin: auto;\n  border: 1px solid grey;\n  padding: 5%;\n"])));
 
 /***/ }),
 
@@ -879,7 +887,7 @@ function Movie(_ref) {
     watched: watched
   }, watched ? 'Watched' : 'To Watch'));
 }
-var Box = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject || (_templateObject = (0,_babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  border: 1px solid black;\n  padding: 10px;\n  text-align: center;\n  width: 30%;\n  display: flex;\n  justify-content: space-between;\n"])));
+var Box = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject || (_templateObject = (0,_babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  border: 1px solid black;\n  padding: 10px;\n  text-align: center;\n  display: flex;\n  justify-content: space-between;\n"])));
 var Button = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].button(_templateObject2 || (_templateObject2 = (0,_babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background-color: ", ";\n  border: ", ";\n  color: ", ";\n  border-radius: 5px;\n  width: 70px;\n"])), function (props) {
   return props.watched ? 'green' : 'white';
 }, function (props) {
@@ -901,12 +909,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ MovieList)
 /* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Movie__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Movie */ "./client/src/components/Movie.jsx");
-/* harmony import */ var _SearchBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./SearchBar */ "./client/src/components/SearchBar.jsx");
-/* harmony import */ var _WatchedTab__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./WatchedTab */ "./client/src/components/WatchedTab.jsx");
+/* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/taggedTemplateLiteral */ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _Movie__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Movie */ "./client/src/components/Movie.jsx");
+/* harmony import */ var _SearchBar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./SearchBar */ "./client/src/components/SearchBar.jsx");
+/* harmony import */ var _WatchedTab__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./WatchedTab */ "./client/src/components/WatchedTab.jsx");
+
+
+
+
+var _templateObject;
 
 
 
@@ -916,38 +931,39 @@ __webpack_require__.r(__webpack_exports__);
 function MovieList(_ref) {
   var movies = _ref.movies;
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(''),
-      _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState, 2),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(''),
+      _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState, 2),
       searchTerm = _useState2[0],
       setSearchTerm = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)((0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(movies)),
-      _useState4 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState3, 2),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)((0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(movies)),
+      _useState4 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState3, 2),
       filteredMovies = _useState4[0],
       setFilteredMovies = _useState4[1];
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)('watched'),
-      _useState6 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState5, 2),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)('watched'),
+      _useState6 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState5, 2),
       tab = _useState6[0],
       setTab = _useState6[1];
 
-  (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
+  (0,react__WEBPACK_IMPORTED_MODULE_3__.useEffect)(function () {
     setFilteredMovies(movies.filter(function (m) {
       return m.title.toLowerCase().includes(searchTerm.toLowerCase());
     }));
   }, [searchTerm, movies]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_WatchedTab__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(Flex, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_WatchedTab__WEBPACK_IMPORTED_MODULE_6__["default"], {
     setTab: setTab
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_SearchBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_SearchBar__WEBPACK_IMPORTED_MODULE_5__["default"], {
     setTerm: setSearchTerm
   })), filteredMovies.length ? filteredMovies.map(function (movie) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_Movie__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_Movie__WEBPACK_IMPORTED_MODULE_4__["default"], {
       item: movie,
       key: movie.title,
       tab: tab
     });
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", null, "No match found."));
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement("div", null, "No match found."));
 }
+var Flex = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject || (_templateObject = (0,_babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  justify-content: space-between;\n"])));
 
 /***/ }),
 
@@ -979,7 +995,9 @@ function SearchBar(_ref) {
     type: "text",
     placeholder: "search...",
     onChange: changeHandler
-  }));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Go!"));
 }
 
 /***/ }),
@@ -1002,7 +1020,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _templateObject;
+var _templateObject, _templateObject2;
 
 
 
@@ -1016,7 +1034,7 @@ function WatchedTab() {
     e.target.innerText === 'Watched' ? setWatched(true) : setWatched(false);
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(Tab, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(Tab, {
     clicked: watched,
     onClick: clickHandler
   }, "Watched"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(Tab, {
@@ -1024,7 +1042,8 @@ function WatchedTab() {
     onClick: clickHandler
   }, "To Watch"));
 }
-var Tab = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject || (_templateObject = (0,_babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  color: ", ";\n  background-color: ", ";\n  border: 1px solid grey;\n"])), function (props) {
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject || (_templateObject = (0,_babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n"])));
+var Tab = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject2 || (_templateObject2 = (0,_babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  color: ", ";\n  background-color: ", ";\n  border: 1px solid grey;\n"])), function (props) {
   return props.clicked ? 'white' : 'black';
 }, function (props) {
   return props.clicked ? 'green' : 'white';

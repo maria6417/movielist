@@ -19,7 +19,6 @@ const Box = styled.div`
   border: 1px solid black;
   padding: 10px;
   text-align: center;
-  width: 30%;
   display: flex;
   justify-content: space-between;
 `;

@@ -12,6 +12,7 @@ export default function SearchBar({ setTerm }) {
   return (
     <div>
       <input type="text" placeholder="search..." onChange={changeHandler} />
+      <button type="button">Go!</button>
     </div>
   );
 }

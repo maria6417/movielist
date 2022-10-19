@@ -8,16 +8,20 @@ export default function WatchedTab() {
   };
 
   return (
-    <div>
+    <Container>
       <Tab clicked={watched} onClick={clickHandler}>
         Watched
       </Tab>
       <Tab clicked={!watched} onClick={clickHandler}>
         To Watch
       </Tab>
-    </div>
+    </Container>
   );
 }
+
+const Container = styled.div`
+  display: flex;
+`;
 
 const Tab = styled.div`
   color: ${props => props.clicked ? 'white' : 'black'};
